@@ -53,4 +53,4 @@ if st.button('Predict'):
     new_data = pd.DataFrame([[store, holiday, temperature, fuel, cpi, unemployment, year, month, day]], columns=['store', 'holiday_flag', 'temperature', 'fuel_price','cpi', 'unemployment', 'year','month', 'day'],dtype='object')
     prediction = model.predict(new_data)
 
-    st.write(f'The predicted Sales In Week {prediction}')
+    st.write(f'The predicted Sales In Week {prediction}.round(2)')
